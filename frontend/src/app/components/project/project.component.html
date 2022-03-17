@@ -1,0 +1,26 @@
+<h1 class="text-center">Timely</h1>
+<app-button color="{{ clicked ? 'red' : 'green' }}"
+text="{{ clicked ? 'Stop' : 'Start' }}" (btnClick)="onStartStop()"></app-button>
+<div class ="container">
+    <div class = "card">
+        <h3 class="text-center"> Project List</h3>
+        <div class = "card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>Name</th>
+                    <th> Starting Date</th>
+                    <th> Ending Date</th>
+                    <th> Duration </th>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let project of projects">
+                        <td> {{ project.name}}</td>
+                        <td> {{ project.startingDate}}</td>
+                        <td> {{ project.endingDate}}</td>
+                        <td> {{ project.duration}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
